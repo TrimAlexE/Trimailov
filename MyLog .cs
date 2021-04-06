@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using core;
 
@@ -10,7 +11,10 @@ namespace Trimailov
         {
             MyLog.Instance().log.Add(result);
         }
-       
+        public static List<string> GetLog()
+        {
+            return MyLog.Instance().log;
+        }
         public static void Write()
         {
             MyLog.Instance()._write();
